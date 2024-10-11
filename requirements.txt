@@ -5,9 +5,7 @@ langchain_core
 langchain_community
 # langchain_voyageai
 langchain_groq
-# fastapi[all]
-# uvicorn[standard]
-pymongo[srv]
+pymongo
 # pypdf
 pymupdf4llm
 qdrant-client[fastembed]

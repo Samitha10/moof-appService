@@ -1,22 +1,22 @@
 import os
 import sys
-
+from typing import List, Dict
 
 # Add the project root to the PYTHONPATH
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.exception import CustomException
-from utils.logger import logging
+# from utils.exception import CustomException
+# from utils.logger import logging
 
 
 class QueueHandler:
     def __init__(self) -> None:
         pass
 
-    def process_list(self, input_list):
+    def process_list(self, input_list: List[Dict]):
         required_keys = [
             "operation_id",
             "file_path",
-            "filename",
+            "file_name",
             "life_id",
             "search_state",
             "prompt",
@@ -85,7 +85,18 @@ class QueueHandler:
         "prompt": None,
     },
 ]
-
+ """
+""" sample_list = [
+    {
+        "operation_id": "abcde",
+        "file_path": "example.com",
+        "file_name": "abc",
+        "life_id": "123456",
+        "search_state": True,
+        "prompt": None,
+    }
+]
+print(type(sample_list))
 queueHandler = QueueHandler()
 wiki_list, pdf_list, failed_ids = queueHandler.process_list(sample_list)
 print(wiki_list)

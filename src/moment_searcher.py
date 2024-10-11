@@ -237,7 +237,7 @@ class SimilarSearcher:
         self.qdrant_client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
 
     def search_in_qdrant(self, query_text, life_id):
-        if life_id is not None:
+        if life_id:
             search_result = self.qdrant_client.query(
                 collection_name="moments01",
                 query_text=query_text,
