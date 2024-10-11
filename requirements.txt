@@ -1,2 +1,16 @@
 fastapi[all]
 uvicorn[standard]
+langchain
+langchain_core
+langchain_community
+# langchain_voyageai
+langchain_groq
+pymongo
+# pypdf
+pymupdf4llm
+qdrant-client[fastembed]
+# traceloop-sdk
+# streamlit
+# chardet
+wikipedia
+# sse-starlette
